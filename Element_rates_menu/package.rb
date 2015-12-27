@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 Package.new(
     name: 'display-erates-menu',
     version: vsn(1, 0, 0),

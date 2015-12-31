@@ -397,7 +397,7 @@ class Window_Weapon_Elem < Window_Base
     if (item)
       if (item.is_a?(RPG::Weapon))
         text = ""
-        elem = item.element_set
+        elem = item[0].element_set
         elem.each do |e|
           text += e.to_s
           text += '\n'

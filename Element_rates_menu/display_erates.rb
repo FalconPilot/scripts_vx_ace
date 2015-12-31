@@ -393,8 +393,18 @@ class Window_Weapon_Elem < Window_Base
   #--------------------------------------------------------------------------
   # * Set weapon text
   #--------------------------------------------------------------------------
-  def set_weapon(weapon)
-    set_text("Element")
+  def set_weapon(item)
+    if (item)
+      if (item.is_a?(RPG::Weapon))
+        text = ""
+        elem = item.element_set
+        elem.each do |e|
+          text += e.to_s
+          text += '\n'
+        end
+        set_text("#{text}")
+      end
+    end
   end
   #--------------------------------------------------------------------------
   # * Refresh

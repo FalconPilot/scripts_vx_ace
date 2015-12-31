@@ -382,6 +382,7 @@ class Window_Weapon_Elem < Window_Base
   # * Set weapon text
   #--------------------------------------------------------------------------
   def set_weapon(weapon)
+    set_text("Element")
   end
   #--------------------------------------------------------------------------
   # * Refresh
@@ -403,6 +404,7 @@ class Scene_Equip_Elem < Scene_MenuBase
   def start
     super
     create_help_window
+    create_weapon_window
     create_status_window
     create_element_window
     create_slot_window
@@ -415,6 +417,13 @@ class Scene_Equip_Elem < Scene_MenuBase
   def create_help_window
     @help_window = Window_Help_Alt.new
     @help_window.viewport = @viewport
+  end
+  #--------------------------------------------------------------------------
+  # * Weapon elem window
+  #--------------------------------------------------------------------------
+  def create_weapon_window
+    @weapon_window = Window_Weapon_Elem.new
+    @weapon_window.viewport = @viewport
   end
   #--------------------------------------------------------------------------
   # * Status window

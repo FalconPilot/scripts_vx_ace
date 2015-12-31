@@ -184,6 +184,7 @@ class Window_EquipItem < Window_ItemList
   #--------------------------------------------------------------------------
   attr_reader   :status_window            # Status window
   attr_reader   :element_window           # Element window
+  attr_reader   :weapon_window            # Weapon elem window
   #--------------------------------------------------------------------------
   # * Set Status Window
   #--------------------------------------------------------------------------
@@ -199,10 +200,20 @@ class Window_EquipItem < Window_ItemList
     call_update_help
   end
   #--------------------------------------------------------------------------
+  # * Set Weapon Window
+  #--------------------------------------------------------------------------
+  def weapon_window=(weapon_window)
+    @weapon_window = weapon_window
+    call_update_help
+  end
+  #--------------------------------------------------------------------------
   # * Update Help Text
   #--------------------------------------------------------------------------
   def update_help
     super
+    if @weapon_window
+      puts "OK"
+    end
     if @actor && @status_window || @element_window
       temp_actor = Marshal.load(Marshal.dump(@actor))
       temp_actor.force_change_equip(@slot_id, item)
@@ -361,7 +372,7 @@ class Window_Weapon_Elem < Window_Base
   # * Initialization
   #--------------------------------------------------------------------------
   def initialize(line_number=2)
-    super(Graphics.width * 0.7, 0, Graphics.width * 0.3, fitting_height(line_number))
+    super(Graphics.width * 0.7 + 1, 0, Graphics.width * 0.3, fitting_height(line_number))
   end
   #--------------------------------------------------------------------------
   # * Set text

@@ -398,7 +398,9 @@ class Window_Weapon_Elem < Window_Base
       if (item.is_a?(RPG::Weapon))
         text = ""
         elem = item.features
-        puts elem
+        elem.each do |e|
+          puts e.id
+        end
         set_text("#{text}")
       end
     end

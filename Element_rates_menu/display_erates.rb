@@ -212,7 +212,8 @@ class Window_EquipItem < Window_ItemList
   def update_help
     super
     if @weapon_window
-      puts "OK"
+      @weapon_window.clear
+      @weapon_window.set_weapon(item)
     end
     if @actor && @status_window || @element_window
       temp_actor = Marshal.load(Marshal.dump(@actor))

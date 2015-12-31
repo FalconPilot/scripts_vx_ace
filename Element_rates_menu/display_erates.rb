@@ -399,7 +399,9 @@ class Window_Weapon_Elem < Window_Base
         text = ""
         elem = item.features
         elem.each do |e|
-          puts e.id
+          if (e.code == 31)
+            text += elements[e.data_id].name
+          end
         end
         set_text("#{text}")
       end

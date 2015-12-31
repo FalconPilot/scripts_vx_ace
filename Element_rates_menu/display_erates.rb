@@ -485,6 +485,7 @@ class Scene_Equip_Elem < Scene_MenuBase
     @item_window.help_window = @help_window
     @item_window.status_window = @status_window
     @item_window.element_window = @element_window
+    @item_window.weapon_window = @weapon_window
     @item_window.actor = @actor
     @item_window.set_handler(:ok,     method(:on_item_ok))
     @item_window.set_handler(:cancel, method(:on_item_cancel))

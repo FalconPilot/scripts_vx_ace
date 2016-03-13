@@ -22,8 +22,8 @@ module FPL
   #--------------------------------------------------------------------------
   # * Breath effect parameters
   #--------------------------------------------------------------------------
-  B_SPEED = 0.1# Breath speed (Default = 0.1)
-  B_VARIA = 0.1# Breath amplitude (Default = 0.1)
+  B_SPEED = 0.1     # Breath speed (Default = 0.1)
+  B_VARIA = 0.1     # Breath amplitude (Default = 0.1)
   #--------------------------------------------------------------------------
   # * Insert monster IDs with flying animation in this array
   #--------------------------------------------------------------------------
@@ -31,8 +31,8 @@ module FPL
   #--------------------------------------------------------------------------
   # * Flying effect parameters
   #--------------------------------------------------------------------------
-  F_SPEED = 0.1# Flying speed (Default = 0.1)
-  F_VARIA = 5# Flying amplitude (Default = 5)
+  F_SPEED = 0.1     # Flying speed (Default = 0.1)
+  F_VARIA = 5       # Flying amplitude (Default = 5)
 end
 
 #==============================================================================

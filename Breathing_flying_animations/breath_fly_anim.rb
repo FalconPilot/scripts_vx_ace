@@ -45,7 +45,7 @@ class Sprite_Battler
   #--------------------------------------------------------------------------
   # * Update Aliasing
   #--------------------------------------------------------------------------
-  alias :update_normal :update
+  alias_method :update_normal, :update
   def update
     update_normal
     if @battler && @use_sprite
